@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Portfolio | System Root</title>
+    <style>
+        :root {
+            --green: #00ff41;
+            --bg: #0d0d0d;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--green);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        header {
+            border-bottom: 2px solid var(--green);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        nav a {
+            color: var(--bg);
+            background: var(--green);
+            text-decoration: none;
+            padding: 2px 8px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: #fff;
+        }
+        section {
+            margin-bottom: 40px;
+            display: none; /* Hidden by default for the "page" feel */
+        }
+        section:target {
+            display: block; /* Shows section when link is clicked */
+        }
+        #home { display: block; } /* Show home by default */
+        
+        h2 { text-transform: uppercase; border-left: 5px solid var(--green); padding-left: 10px; }
+        .project-card { border: 1px dashed var(--green); padding: 15px; margin-bottom: 15px; }
+        footer { margin-top: 50px; font-size: 0.8rem; opacity: 0.7; }
+        
+        /* Scanline effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>USER@ECE_STUDENT:~$ IDENTITY</h1>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>> System.Info</h2>
+        <p>Almost graduate Electrical and Computer Engineering student specializing in [Your Interest, e.g., Embedded Systems / VLSI / DSP].</p>
+        <p>I build things with silicon, C++, and a bit of caffeine. Currently looking for opportunities to solve complex hardware-software problems.</p>
+    </section>
+
+    <section id="projects">
+        <h2>> Academic_Projects.log</h2>
+        <div class="project-card">
+            <h3>01. FPGA RISC-V Processor</h3>
+            <p>Designed a 5-stage pipelined processor in Verilog. Optimized for power and timing on Xilinx Artix-7.</p>
+        </div>
+        <div class="project-card">
+            <h3>02. Autonomous Robot Controller</h3>
+            <p>Real-time PID control system using ESP32 and FreeRTOS for obstacle avoidance.</p>
+        </div>
+    </section>
+
+    <section id="cv">
+        <h2>> Resume.sh</h2>
+        <h3>Education</h3>
+        <p>B.Sc. in Electrical & Computer Engineering | [Your University] | 2022 - 2026</p>
+        <h3>Skills</h3>
+        <ul>
+            <li>Languages: C, C++, Verilog, Python</li>
+            <li>Tools: MATLAB, LTSpice, Vivado, Docker</li>
+        </ul>
+        <p><a href="your-pdf-link.pdf" style="color:white;">[Download Full PDF]</a></p>
+    </section>
+
+    <section id="contact">
+        <h2>> Connect.exe</h2>
+        <p>Email: <a href="mailto:you@example.com" style="color:var(--green)">you@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/youruser" style="color:var(--green)">github.com/youruser</a></p>
+        <p>LinkedIn: <a href="#" style="color:var(--green)">/in/yourprofile</a></p>
+    </section>
+
+    <footer>
+        <p>Terminal Portfolio v1.0.0 | (c) 2026 | Terminating session...</p>
+    </footer>
+</div>
+
+</body>
+</html>
