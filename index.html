@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECE Portfolio | System Root</title>
+    <title>User // Home</title>
     <style>
         :root {
-            --green: #00ff41;
-            --bg: #0d0d0d;
+            --bg: #121212;
+            --text: #e0e0e0;
+            --accent: #00ff41; /* Matrix Green or try #ffb000 for Amber */
+            --border: #333;
         }
+
         body {
             background-color: var(--bg);
-            color: var(--green);
+            color: var(--text);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             margin: 0;
@@ -19,106 +22,111 @@
             display: flex;
             justify-content: center;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 700px;
             width: 100%;
+            border: 1px solid var(--border);
+            padding: 40px;
+            box-shadow: 10px 10px 0px #000;
         }
+
         header {
-            border-bottom: 2px solid var(--green);
+            border-bottom: 2px double var(--border);
             margin-bottom: 30px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         nav a {
-            color: var(--bg);
-            background: var(--green);
+            color: var(--accent);
             text-decoration: none;
-            padding: 2px 8px;
-            margin-right: 10px;
+            margin-right: 15px;
             font-weight: bold;
         }
+
         nav a:hover {
-            background: #fff;
+            background: var(--accent);
+            color: var(--bg);
         }
+
         section {
             margin-bottom: 40px;
-            display: none; /* Hidden by default for the "page" feel */
         }
-        section:target {
-            display: block; /* Shows section when link is clicked */
+
+        h2 {
+            font-size: 1.1rem;
+            background: var(--border);
+            display: inline-block;
+            padding: 2px 10px;
+            margin-bottom: 15px;
         }
-        #home { display: block; } /* Show home by default */
-        
-        h2 { text-transform: uppercase; border-left: 5px solid var(--green); padding-left: 10px; }
-        .project-card { border: 1px dashed var(--green); padding: 15px; margin-bottom: 15px; }
-        footer { margin-top: 50px; font-size: 0.8rem; opacity: 0.7; }
-        
-        /* Scanline effect */
-        body::before {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 2;
-            background-size: 100% 2px, 3px 100%;
-            pointer-events: none;
+
+        .project-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            .project-item { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>USER@ECE_STUDENT:~$ IDENTITY</h1>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#cv">CV</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>SYSTEM_STATUS: ONLINE</h1>
+            <p>Independent Developer // Researcher // Human</p>
+            <nav>
+                <a href="#">[HOME]</a>
+                <a href="#">[PROJECTS]</a>
+                <a href="#">[LOGS]</a>
+                <a href="mailto:your@email.com">[CONTACT]</a>
+            </nav>
+        </header>
 
-    <section id="home">
-        <h2>> System.Info</h2>
-        <p>Almost graduate Electrical and Computer Engineering student specializing in [Your Interest, e.g., Embedded Systems / VLSI / DSP].</p>
-        <p>I build things with silicon, C++, and a bit of caffeine. Currently looking for opportunities to solve complex hardware-software problems.</p>
-    </section>
+        <section id="about">
+            <h2>01. BIO</h2>
+            <p>Building digital tools with a focus on stability and simplicity. I believe the web should be fast, readable, and private. Currently exploring low-level systems and minimalist UI design.</p>
+        </section>
 
-    <section id="projects">
-        <h2>> Academic_Projects.log</h2>
-        <div class="project-card">
-            <h3>01. FPGA RISC-V Processor</h3>
-            <p>Designed a 5-stage pipelined processor in Verilog. Optimized for power and timing on Xilinx Artix-7.</p>
-        </div>
-        <div class="project-card">
-            <h3>02. Autonomous Robot Controller</h3>
-            <p>Real-time PID control system using ESP32 and FreeRTOS for obstacle avoidance.</p>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>02. RECENT_WORKS</h2>
+            <div class="project-item">
+                <span>> Neural_Net_Visualizer</span>
+                <span>2025</span>
+            </div>
+            <div class="project-item">
+                <span>> Encrypted_Chat_Protocol</span>
+                <span>2024</span>
+            </div>
+            <div class="project-item">
+                <span>> Distributed_FileSystem</span>
+                <span>2024</span>
+            </div>
+        </section>
 
-    <section id="cv">
-        <h2>> Resume.sh</h2>
-        <h3>Education</h3>
-        <p>B.Sc. in Electrical & Computer Engineering | [Your University] | 2022 - 2026</p>
-        <h3>Skills</h3>
-        <ul>
-            <li>Languages: C, C++, Verilog, Python</li>
-            <li>Tools: MATLAB, LTSpice, Vivado, Docker</li>
-        </ul>
-        <p><a href="your-pdf-link.pdf" style="color:white;">[Download Full PDF]</a></p>
-    </section>
-
-    <section id="contact">
-        <h2>> Connect.exe</h2>
-        <p>Email: <a href="mailto:you@example.com" style="color:var(--green)">you@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/youruser" style="color:var(--green)">github.com/youruser</a></p>
-        <p>LinkedIn: <a href="#" style="color:var(--green)">/in/yourprofile</a></p>
-    </section>
-
-    <footer>
-        <p>Terminal Portfolio v1.0.0 | (c) 2026 | Terminating session...</p>
-    </footer>
-</div>
+        <footer>
+            <p>&copy; 2026 | Built with minimalist principles. | No trackers. No cookies.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
