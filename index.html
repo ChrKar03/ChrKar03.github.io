@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USER_PORTFOLIO.EXE</title>
+    <title>CHRISTOS_KARAGIANNIS.EXE</title>
     <style>
         /* Retro Terminal CSS */
         body {
@@ -73,27 +73,34 @@
 </head>
 <body>
 
-    <h1>C:\Users\Developer> Whoami<span class="cursor"></span></h1>
+    <h1>C:\Users\Christos_Karagiannis> Whoami<span class="cursor"></span></h1>
     
     <p>Loading profile...</p>
-    <p><strong>Status:</strong> Online and coding.</p>
-    <p><strong>Bio:</strong> Hello, world. I am a developer who builds things. Welcome to my digital terminal.</p>
+    <p><strong>Status:</strong> Online.</p>
+    <p><strong>Bio:</strong> Systems and Embedded Developer. I build everything from low-level thread schedulers and hardware multiplexers to DIY software-defined radios.</p>
 
     <br>
 
     <h2>DIR /Projects</h2>
 
     <div class="project-card">
-        <div class="project-title">> Project_Name_01.exe</div>
-        <p><strong>Description:</strong> A brief description of what this amazing application does and the problems it solves.</p>
-        <p><strong>Tech Stack:</strong> Python, Flask, HTML/CSS</p>
+        <div class="project-title">> APU-MUX_UAV_Multiplexer.sys</div>
+        <p><strong>Description:</strong> A hardware-in-the-loop (HITL) validated multiplexer system designed for UAV autopilots. It acts as a redundancy mechanism, safely switching control between two Autopilot Units (APU) to a single set of actuators. Built utilizing STM32 microcontrollers (G4 and H7 dual-core architectures) for hard real-time PWM sampling and reproduction.</p>
+        <p><strong>Tech Stack:</strong> C/C++, STM32, Embedded Systems, ArduPilot, Python</p>
         <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank">[ View Source ]</a>
     </div>
 
     <div class="project-card">
-        <div class="project-title">> Project_Name_02.sh</div>
-        <p><strong>Description:</strong> Another cool script or application that I built from scratch.</p>
-        <p><strong>Tech Stack:</strong> JavaScript, React, Node.js</p>
+        <div class="project-title">> Franken-Radio-5000.sh</div>
+        <p><strong>Description:</strong> A DIY walkie-talkie rig that turns a Raspberry Pi 5 and an ADALM-PLUTO SDR into a fully functional NBFM transceiver operating on the PMR446 band. Features a custom GNU Radio embedded Python block for physical push-to-talk, channel, and gain controls, all housed in a custom 3D-printed honeycomb shell.</p>
+        <p><strong>Tech Stack:</strong> Python, GNU Radio, Raspberry Pi, SDR, 3D Printing</p>
+        <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank">[ View Source ]</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">> User-Level_Thread_Scheduler.c</div>
+        <p><strong>Description:</strong> A custom user-level threading library built from scratch in C using the `<ucontext.h>` library. Features a preemptive round-robin scheduler driven by POSIX timers (`setitimer` and `SIGALRM`). Demonstrated via a multithreaded simulation of the classic Readers-Writers problem.</p>
+        <p><strong>Tech Stack:</strong> C, POSIX, Linux, Synchronization</p>
         <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank">[ View Source ]</a>
     </div>
 
